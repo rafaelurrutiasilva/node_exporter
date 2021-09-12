@@ -36,7 +36,7 @@ exit 0
 mkdir -p $RPM_BUILD_ROOT/var/lib/prometheus
 mkdir -p $RPM_BUILD_ROOT/usr/sbin
 mkdir -p $RPM_BUILD_ROOT/etc/default/node_exporter
-imkdir -p $RPM_BUILD_ROOT/etc/systemd/system/
+mkdir -p $RPM_BUILD_ROOT/etc/systemd/system/
 
 cp $RPM_SOURCE_DIR/node_exporter		$RPM_BUILD_ROOT/usr/sbin/.
 cp $RPM_SOURCE_DIR/node_exporter.service 	$RPM_BUILD_ROOT/etc/systemd/system/.
