@@ -37,9 +37,10 @@ mkdir -p $RPM_BUILD_ROOT/var/lib/prometheus
 mkdir -p $RPM_BUILD_ROOT/usr/sbin
 mkdir -p $RPM_BUILD_ROOT/etc/default/node_exporter
 mkdir -p $RPM_BUILD_ROOT/etc/systemd/system/
+mkdir -p $RPM_BUILD_ROOT/usr/lib/systemd/system/
 
 cp $RPM_SOURCE_DIR/node_exporter		$RPM_BUILD_ROOT/usr/sbin/.
-cp $RPM_SOURCE_DIR/node_exporter.service 	$RPM_BUILD_ROOT/etc/systemd/system/.
+cp $RPM_SOURCE_DIR/node_exporter.service 	$RPM_BUILD_ROOT/usr/lib/systemd/system/
 
 %post
 systemctl daemon-reload
@@ -55,7 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0755,root,root,-)
 /var/lib/prometheus
 /usr/sbin/node_exporter
-/etc/systemd/system/node_exporter.service
+/usr/lib/systemd/system/node_exporter.service
 
 %defattr(0755,prometheus,prometheus,-)
 /etc/default/node_exporter
