@@ -7,12 +7,11 @@ Dessvärre så verkar den inte finns paketerad för Photon OS. Här kommer jag d
 Mera information finns på github projektet för [Prometheus](https://github.com/prometheus/node_exporter)
 
 <h2> Installation </h2>
-
-<h3> Bygga rpm:en </h3>
-Ladda ner detta repo till lämplig katalog i din Photon OS nod och kör:<br>
-<code> rpmbuild -ba node_exporter.spec </code>
-
-<h3> Installera rpm:en </h3>
-Lokalisera ditt bygg packet och installera som exempeln visar:<br>
+- Ladda ner detta repo till lämplig katalog i din Photon OS nod och kör:<br>
+<code> rpmbuild -ba node_exporter.spec </code><br>
+- Lokalisera ditt bygg packet och installera som exempeln visar:<br>
 <code> tdnf install $path/node-exporter-1.2.2-1.x86_64.rpm </code>
+
+<h2> Resultat </h2>
+Resultatet, dvs de värde data som läses ut finns att se under http://${HOSTNAME}:9100/metrics
 
